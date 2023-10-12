@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { HeaderBootstrap } from "./Header";
+
 import Footer from "./Footer";
+import HeaderBootstrap from "./Header";
 
 export default function Body() {
   return (
     <div className="container">
-      <HeaderBootstrap />
+      <HeaderBootstrap />      
       <Outlet />
       <Footer />
     </div>
