@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Card, CardBody, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function NoticiasScreen() {
@@ -24,15 +24,25 @@ export default function NoticiasScreen() {
     <Container>
       <h1>Notícias</h1>
       <p>Esta é a página de notícias</p>
+      <Row>
       {noticias.map(function (noticia, indice) {
         return (
-          <Container key={indice}>
-            <h1>{noticia.title}</h1>
-            <p>{noticia.body.substring(0.5)}...</p>
-            <Link to={"/noticias/" + noticia.id}>Leia mais</Link>
-          </Container>
+          <Col lg={3} xs={12} md={6} key={indice} style={
+            {
+              marginBottom: "20px"
+            }
+          }>
+            <Card className="h-100">
+              <CardBody>
+                <Card.Title>{noticia.title}</Card.Title>
+                <Card.Text>{noticia.body.substring(0, 50)}...</Card.Text>
+                <Link to={"/noticias/" + noticia.id}>Leia mais</Link>
+              </CardBody>
+            </Card>
+          </Col>
         );
       })}
+      </Row>
     </Container>
   );
 }

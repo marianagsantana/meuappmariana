@@ -1,9 +1,10 @@
+import { Container } from "react-bootstrap";
 
 export default function Footer(){
     return(
-      <div className="mt-5">
+      <Container className="container" fluid>
         <h2>Rodapé</h2>
-      </div>
+      </Container>
     )
   }
 
