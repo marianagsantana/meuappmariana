@@ -6,6 +6,7 @@ import ContatoScreen from "../screens/ContatoScreen";
 import NoticiasScreen from "../screens/NoticiasScreen";
 import { Container } from "react-bootstrap";
 import NoticiasSingleScreen from "../screens/NoticiasSingleScreen";
+import LojaScreen from "../screens/LojaScreen";
 
 export default function RoutesRoot() {
   return (
@@ -17,6 +18,7 @@ export default function RoutesRoot() {
           <Route element={<ContatoScreen />} path="/contato"></Route>
           <Route element={<NoticiasSingleScreen />} path="/noticias/:idNoticia"></Route>
           <Route element={<NoticiasScreen />} path="/noticias"></Route>
+          <Route element={<LojaScreen />} path="/loja"></Route>
           <Route path="*" element={<Pagina404 />} />
         </Route>
       </Routes>

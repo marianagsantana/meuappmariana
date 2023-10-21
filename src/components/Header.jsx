@@ -20,6 +20,7 @@ export default function HeaderBootstrap() {
                         <Link to="/sobre" className="nav-link">Sobre</Link>
                         <Link to="/contato" className="nav-link">Contato</Link>
                         <Link to="/noticias" className="nav-link">Notícias</Link>
+                        <Link to="/loja" className="nav-link">Loja</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
